@@ -11,7 +11,8 @@ public class Profile {
 
 	@Id
 	private String id;
-	private String candidateName;
+	private String firstName;
+	private String lastName;
 	private String emailId;
 	private String phoneNumber;
 	private String title;
@@ -20,14 +21,18 @@ public class Profile {
 	private List<String> primarySkills;
 	private List<String> secondarySkills;
 	private Binary resume;
+	private Boolean isActive;
 
 	public Profile() {
 	}
 
-	public Profile(String candidateName, String emailId, String phoneNumber, String title, Float numberOfYearsExp,
-			String profileSummary, List<String> primarySkills, List<String> secondarySkills, Binary resume) {
+	public Profile(String id, String firstName, String lastName, String emailId, String phoneNumber, String title,
+			Float numberOfYearsExp, String profileSummary, List<String> primarySkills, List<String> secondarySkills,
+			Binary resume, Boolean isActive) {
 		super();
-		this.candidateName = candidateName;
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.emailId = emailId;
 		this.phoneNumber = phoneNumber;
 		this.title = title;
@@ -36,6 +41,7 @@ public class Profile {
 		this.primarySkills = primarySkills;
 		this.secondarySkills = secondarySkills;
 		this.resume = resume;
+		this.isActive = isActive;
 	}
 
 	public String getId() {
@@ -46,12 +52,28 @@ public class Profile {
 		this.id = id;
 	}
 
-	public String getCandidateName() {
-		return candidateName;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setCandidateName(String candidateName) {
-		this.candidateName = candidateName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Boolean getIsActive() {
+		return isActive;
+	}
+
+	public void setIsActive(Boolean isActive) {
+		this.isActive = isActive;
 	}
 
 	public String getEmailId() {

@@ -41,7 +41,7 @@ public class ProfileController {
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-		if (profileAdded == null || profileAdded.getCandidateName() == null) {
+		if (profileAdded == null || profileAdded.getFirstName() == null) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else {
 			return new ResponseEntity<>(profileAdded, HttpStatus.OK);
